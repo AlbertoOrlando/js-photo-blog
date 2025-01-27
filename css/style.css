@@ -14,7 +14,7 @@ header{
 }
 
 h1{
-    font-size: 80px;
+    font-size: 70px;
     font-family: "Edu Tas Beginner", sans-serif;
 }
 
@@ -59,12 +59,10 @@ main{
 
 .pin{
     position: absolute;
-    top: 7px;
+    top: -10px;
     left: 50%;
-    transform: translate(-50%,-50%);
-    width: 70px;
-    /* padding: 0;
-    margin: 0; */
+    transform: translateX(-50%);
+    height: 30px;
 }
 
 .card:hover {
