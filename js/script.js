@@ -1,16 +1,20 @@
+
 const contCards = document.querySelector(".contenitore_cards");
+
 const contInHover = document.getElementById("containerHover");
+
 const closeHover = document.getElementById("bottone");
+
 const imgInHover = document.getElementById("immagineOverLay");
 
 axios.get("https://lanciweb.github.io/demo/api/pictures/")
     .then(response => {
         const cards = response.data;
         for(let i = 0; i < cards.length; i++){
-            card = cards[i];
+            let card = cards[i];
             const { title, date, url } = card;
             contCards.innerHTML += `
-                <div class="card mb-3">
+                <div class="card">
                     <img class="pin" src="img/pin.svg" alt="pin">
                     <img src="${url}" class="card-img" alt="${title}">
                     <div class="card-body"> 
@@ -27,7 +31,6 @@ axios.get("https://lanciweb.github.io/demo/api/pictures/")
                 const img = card.querySelector(".card-img");
                 imgInHover.src = img.src;
                 contInHover.classList.remove("d_none");
-
             });
         });
 
@@ -38,4 +41,5 @@ axios.get("https://lanciweb.github.io/demo/api/pictures/")
     })
     .catch(error => {
         console.error(error)
+        contCards.innerHTML =`<h3>404-not found</h3>`;
     })

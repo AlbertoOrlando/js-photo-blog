@@ -6,7 +6,6 @@
 header{
     background-image: url("../img/wall.png");
     background-size: cover;
-    background-position: center center;
     height: 100px;
     display: flex;
     align-items: center;
@@ -29,10 +28,9 @@ p{
     color: gray;
 }
 
-main{
+body{
     background-image: url("../img/cork.png");
     background-size: cover;
-    min-height: 100vh;
 }
 
 .row{
@@ -40,7 +38,9 @@ main{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
-    padding: 1% 1%;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 40px;
 }
 
 .card{
@@ -48,8 +48,7 @@ main{
     background-color: white;
     border: 1px solid white;
     position: relative;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     padding: 1%;
 }
 
@@ -93,25 +92,20 @@ main{
     display: flex;
     flex-direction: column;
     width: 50%;
-    margin: 0 auto;
-    padding: 20px;
+    margin: 20px auto;
 }
 
 .container__overlay img{
     max-width: 100%;
-    margin: 0 auto;
-    padding: 50px;
+    margin: 50px auto;
 }
 
 .bottoneOverLay{
-    margin: 0 40%;
+    margin: 0 auto;
     margin-top: 40px;
     padding: 1%;
 }
 
-.d-none{
-    display: none;
-}
 
 
 /* tablet */
@@ -140,13 +134,17 @@ main{
 @media screen and (max-width:500px){
     .card{
         width: 50%;
-        margin: 0px auto;
+        margin: 0 auto;
         margin-bottom: 20px;
     }
 
     .row{
         display: block;
-        padding-top: 20px;
-        padding-bottom: 20px;
     }
+}
+
+
+/* errore */
+h3{
+    font-size: 100px;
 }
