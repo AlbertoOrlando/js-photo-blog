@@ -91,19 +91,19 @@ body{
 .container__overlay{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 40%;
     margin: 20px auto;
 }
 
 .container__overlay img{
     max-width: 100%;
-    margin: 50px auto;
+    margin-top: 30px;
 }
 
 .bottoneOverLay{
     margin: 0 auto;
-    margin-top: 40px;
-    padding: 1%;
+    padding: 2%;
+    font-size: 20px;
 }
 
 
