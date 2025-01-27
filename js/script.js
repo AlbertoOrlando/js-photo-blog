@@ -1,4 +1,7 @@
 const contCards = document.querySelector(".contenitore_cards");
+const contInHover = document.getElementById("containerHover");
+const closeHover = document.getElementById("bottone");
+const imgInHover = document.getElementById("immagineOverLay");
 
 axios.get("https://lanciweb.github.io/demo/api/pictures/")
     .then(response => {
@@ -8,7 +11,7 @@ axios.get("https://lanciweb.github.io/demo/api/pictures/")
             const { title, date, url } = card;
             contCards.innerHTML += `
                 <div class="card mb-3">
-                    <img src="${url}" class="card-img-top" alt="${title}">
+                    <img src="${url}" class="card-img" alt="${title}">
                     <div class="card-body"> 
                         <p class="card-text"><small class="text-body-secondary">${date}</small></p>
                         <h5 class="card-title">${title}</h5>
@@ -19,6 +22,21 @@ axios.get("https://lanciweb.github.io/demo/api/pictures/")
                   </div>
             `;
         }
+        
+        const newCards = document.querySelectorAll(".card");
+        newCards.forEach(card => {
+            card.addEventListener("click", () => {
+                const img = card.querySelector(".card-img");
+                imgInHover.src = img.src;
+                contInHover.classList.remove("d_none");
+
+            });
+        });
+
+        closeHover.addEventListener("click", () => {
+            contInHover.classList.add("d_none");
+        });
+        
     })
     .catch(error => {
         console.error(error)
