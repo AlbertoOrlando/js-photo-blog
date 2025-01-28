@@ -20,11 +20,14 @@
     <title>Photo Blog</title>
 </head>
 <body>
-    
+    <!-- creiamo l'header(parte superiore della pagina)  -->
         <header>
+            <!-- creiamo l'h1 all'interno dell'header(titolo principale) -->
             <h1>ESTATE '24</h1>
         </header>
+        <!-- creiamo il <main></main> -->
         <main>
+            <!-- creiamo il nostro contenitore di cards che verranno generate dinamicamente -->
             <div class="row contenitore_cards">
                 <!-- <div class="col-4">
                     <div class="card mb-3">
@@ -36,8 +39,11 @@
                       </div>
                 </div> -->
             </div>
+            <!-- creiamo il contenitore dell'overlay a cui diamo una classe con display none -->
             <div id="containerHover" class="overLay d_none">
+                <!-- inseriamo la nostra img e il nostro button in altro contenitore per gestire meglio le dimensioni del nostro contenitore e dei tag interni -->
                 <div class="container__overlay">
+                    <!-- creiamo un button per chiudere l'overlay e un img con src dinamico -->
                     <button id="bottone" class="bottoneOverLay">CHIUDI</button>
                     <img id="immagineOverLay" src="" alt="">
                 </div>

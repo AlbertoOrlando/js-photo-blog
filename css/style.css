@@ -1,17 +1,11 @@
+/* regole generali */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-header{
-    background-image: url("../img/wall.png");
-    background-size: cover;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
+/* regole per i testi */
 h1{
     font-size: 70px;
     font-family: "Edu Tas Beginner", sans-serif;
@@ -28,11 +22,23 @@ p{
     color: gray;
 }
 
+/* stilizazione header */
+header{
+    background-image: url("../img/wall.png");
+    background-size: cover;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* stilizazione body */
 body{
     background-image: url("../img/cork.png");
     background-size: cover;
 }
 
+/* regole contenitore cards */
 .row{
     display: flex;
     flex-wrap: wrap;
@@ -43,6 +49,7 @@ body{
     margin-top: 40px;
 }
 
+/* regole singola card */
 .card{
     width: 26%;
     background-color: white;
@@ -52,10 +59,12 @@ body{
     padding: 1%;
 }
 
+/* regole img di una card */
 .card img{
     max-width: 100%;
 }
 
+/* regole pin delle card */
 .pin{
     position: absolute;
     top: -10px;
@@ -64,20 +73,24 @@ body{
     height: 30px;
 }
 
+/* regole delle carte in hover */
 .card:hover {
     transform: rotate(15deg);
     z-index: 1;
     transition: 0.5s;
 }
 
+/* regole pin delle carte in hover */
 .card:hover .pin{
     display: none;
 }
 
+/* classe display none data al contenitore overlay */
 .d_none{
     display: none;
 }
 
+/* regole contenitore overlay */
 .overLay{
     position: fixed;
     top: 0;
@@ -88,18 +101,20 @@ body{
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+/* regole contenitore di img e button overlay */
 .container__overlay{
     display: flex;
     flex-direction: column;
     width: 40%;
     margin: 20px auto;
 }
-
+/* regole img overlay */
 .container__overlay img{
     max-width: 100%;
     margin-top: 30px;
 }
 
+/* regole bottone overlay */
 .bottoneOverLay{
     margin: 0 auto;
     padding: 2%;
@@ -130,7 +145,6 @@ body{
 }
 
 /* mobile */
-
 @media screen and (max-width:500px){
     .card{
         width: 50%;
@@ -143,7 +157,7 @@ body{
     }
 }
 
-
+/* regole messaggio di errore che lancia js */
 /* errore */
 h3{
     font-size: 100px;
